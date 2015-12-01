@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'kontrak_dosen.list'|trans({}, 'AisKontrakDosenBundle') }}</h1>
+
+    <ul id="kontrak_dosen-list">
+        {% for kontrak_dosen in kontrak_dosens %}
+            <li>
+                <a href="{{ path('api_1_get_kontrak_dosen', {'id': kontrak_dosen.id}) }}">{{ kontrak_dosen.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_kontrak_dosens', {'id': kontrak_dosen.id}) }}">{{ 'kontrak_dosen.edit.link'|trans({}, 'AisKontrakDosenBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_kontrak_dosens', {'id': kontrak_dosen.id}) }}">{{ 'kontrak_dosen.remove.link'|trans({}, 'AisKontrakDosenBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'kontrak_dosen.list.empty'|trans({}, 'AisKontrakDosenBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_kontrak_dosen') }}">{{ 'kontrak_dosen.new.link'|trans({}, 'AisKontrakDosenBundle') }}</a>
+    </p>
+{% endblock %}

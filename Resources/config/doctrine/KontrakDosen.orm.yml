@@ -1,0 +1,27 @@
+Ais\KontrakDosenBundle\Entity\KontrakDosen:
+ type: entity
+ table: kontrak_dosen
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  matakuliah_id:
+   type: integer
+  dosen_id:
+   type: integer
+  semester_id:
+   type: integer
+  kelas_id:
+   type: integer
+  max_siswa:
+   type: integer
+   nullable: true
+  filter_id:
+   type: integer
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true
