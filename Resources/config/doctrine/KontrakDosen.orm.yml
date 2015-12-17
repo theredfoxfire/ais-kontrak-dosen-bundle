@@ -1,6 +1,7 @@
 Ais\KontrakDosenBundle\Entity\KontrakDosen:
  type: entity
  table: kontrak_dosen
+ repositoryClass: Ais\KontrakDosenBundle\Repository\KontrakDosenRepository
  id:
   id: 
    type: integer

@@ -258,4 +258,3 @@ class KontrakDosen implements KontrakDosenInterface
         return $this->is_delete;
     }
 }
-
